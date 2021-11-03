@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">English_tips</string>
+    <string name="english_icon">English</string>
+    <string name="contacts_text">Контакты</string>
+    <string name="about_me_text">Про меня</string>
+    <string name="main_scene_text">Главная</string>
+    <string name="logo_of_app_1">English</string>
+    <string name="logo_of_app_2">App</string>
 </resources>
