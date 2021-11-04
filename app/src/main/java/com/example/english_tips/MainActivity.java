@@ -7,7 +7,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 
 import com.example.english_tips.adapter.CategoryAdapter;
+import com.example.english_tips.adapter.CourseAdapter;
 import com.example.english_tips.model.Category;
+import com.example.english_tips.model.Course;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +18,9 @@ public class MainActivity extends AppCompatActivity {
 
 
     RecyclerView categoryRecycler;
+    RecyclerView courseRecycler;
     CategoryAdapter categoryAdapter;
+    CourseAdapter courseAdapter;
 
 
     @Override
@@ -32,6 +36,25 @@ public class MainActivity extends AppCompatActivity {
         categoryList.add(new Category(5, "March"));
 
         setCategoryRecycler(categoryList);
+
+
+        List<Course> courseList = new ArrayList<>();
+        courseList.add(new Course(1, "java", "Профессия Java\nразработчик", "5 ноября", "начальный", "#424345"));
+        courseList.add(new Course(2, "qa", "Профессия QA\nспециалист", "15 ноября", "средний", "#9FA52D"));
+
+
+        setCourseRecycler(courseList);
+    }
+
+    private void setCourseRecycler(List<Course> courseList) {
+
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false);
+
+        courseRecycler = findViewById(R.id.courseRecycler);
+        courseRecycler.setLayoutManager(layoutManager);
+
+        courseAdapter = new CourseAdapter(this, courseList);
+        courseRecycler.setAdapter(courseAdapter);
     }
 
     private void setCategoryRecycler(List<Category> categoryList) {
