@@ -17,8 +17,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
 
-    RecyclerView categoryRecycler;
-    RecyclerView courseRecycler;
+    RecyclerView categoryRecycler, courseRecycler;
     CategoryAdapter categoryAdapter;
     CourseAdapter courseAdapter;
 
@@ -39,8 +38,9 @@ public class MainActivity extends AppCompatActivity {
 
 
         List<Course> courseList = new ArrayList<>();
-        courseList.add(new Course(1, "java", "Профессия Java\nразработчик", "5 ноября", "начальный", "#424345"));
-        courseList.add(new Course(2, "qa", "Профессия QA\nспециалист", "15 ноября", "средний", "#9FA52D"));
+        courseList.add(new Course(1, "java_2", "Профессия Java\nразработчик", "5 ноября", "junior", "#424345"));
+        courseList.add(new Course(2, "qa_2", "Профессия QA\nспециалист", "15 ноября", "middle", "#9FA52D"));
+        courseList.add(new Course(3, "qa_december", "Профессия QA\nспециалист", "01 декабря", "senior", "#7CE89A"));
 
 
         setCourseRecycler(courseList);
